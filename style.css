@@ -845,34 +845,6 @@
     .header .login-form {
       width: 90%;
     }
-    .amenities .amenities-slider{
-      justify-content: space-between 20px;
-      padding: 2rem 10rem;
-      height: 130px;
-    }
-    .amenities .slide .image {
-      margin-left: 50px;
-      height: 70px;
-
-    }
-    .amenities .slide .image img{
-      width: 50px;
-      height: 50px;
-      margin-top: 5px;
-      margin-left: 15 px;
-    }
-    .amenities .slide .content {
-        margin-top: 30px; 
-      }
-    .amenities .slide .content h3{
-        margin-right: 500px;
-    }
-    .amenities .slide{
-      margin-left: 100px;
-      padding: 10px 10px;
-      width: 50px;
-      height: 70px;;
-    }
     .home .slide {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
@@ -904,7 +876,7 @@
       margin-left: 1px;
     }
     .about .box-container .box {
-      width: 150px;
+      width: 130px;
       margin-left: 10px;
       padding: 1rem 4rem;
     }
