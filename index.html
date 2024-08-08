@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KK Create and Build</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="shortcut icon" href="logo.png" type="">
+</head>
+<style>
+   * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: black;
+}
+
+.next{
+   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 66.20%;
+  width: 50px;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: black;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+}
+
+.statement{
+   margin-left: 950px;
+   position: absolute;
+   margin-top: -480px;
+   text-align: center;
+   font-size: 18px;
+   color: navy;
+   font-weight: bold;
+   box-shadow: #bbb;
+   user-select: none;
+}
+
+.h1{
+   margin-left: 1000px;
+   position: absolute;
+   background-color: green;
+   width: 300px;
+   height: 3px;
+   margin-top: -410px;
+}
+
+h2{
+   margin-left: 1000px;
+   position: absolute;
+   margin-top: -370px;
+   font-size: 30px;
+   color: navy;
+   font-weight: bolder;
+   user-select: none;
+   text-transform: uppercase;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sentence{
+   margin-left: 1060px;
+   margin-top: -300px;
+   position: absolute;
+   text-align: center;
+}
+.sent{
+   position: absolute;
+   margin-left: 985px;
+   margin-top: -200px;
+   font-size: 16px;
+   font-weight: bold;
+}
+.lines{
+   margin-left: 930px;
+   position: absolute;
+   margin-top: -60px;
+   text-align: center;
+   font-size: 18px;
+   color: navy;
+   font-weight: bold;
+   font-style: oblique;
+   font-family: cursive;
+   box-shadow: #bbb;
+}
+
+.h2{
+   margin-left: 970px;
+   position: absolute;
+   background-color: green;
+   width: 300px;
+   height: 3px;
+   margin-top: -90px;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+  margin-top: 50px;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 667px) {
+  .prev, .next,.text {font-size: 10px}
+  .next{
+   margin-left: 85px;
+   width: 25px;
+  }
+  .fade{
+   width: 360px;
+   margin-top: -5px;
+   margin-left: 1px;
+  }
+  #div1{
+   margin-top: 30px;
+   width: 360px;
+  }
+  .statement{
+   font-size: 18px;
+   margin-left: 30px;
+   margin-top: -180px;
+   text-align: center;
+  }
+  .h1{
+   margin-left: 30px;
+   width: 300px;
+   height: 2px;
+   margin-top: -110px;
+  }
+  h2{
+   margin-left: 55px;
+   margin-top: -100px;
+   font-size: 24px;
+  }
+  .lines{
+   font-size: 18px;
+   margin-left: 10px;
+   padding: 2rem;
+   margin-top: -260px;
+  }
+  .h2{
+   margin-left:30px;
+   width: 300px;
+   height: 2px;
+   margin-top: 50px;
+  }
+  .text{
+   font-size: 4px;
+  }
+  .sentence{
+   margin-left: 100px;
+   margin-top: -50px;
+   font-size: 12px;
+  }
+  .sent{
+   margin-left: 95px;
+   margin-top: 25px;
+   font-size: 12px;
+  }
+}  
+@media screen and(max-width: 480px) {
+   .statement{
+      text-align: center;
+   }
+   .next{
+   margin-left: 80px;
+  }
+}
+
+</style>
+<body>
+    <!-- header section starts  -->
+
+<header class="header">
+    <a href="#" class="logo"><img src="logo.png" alt="" class="img"></a>
+ 
+    <nav class="navbar">
+       <a href="index.html">home</a>
+       <a href="#about">about</a>
+       <a href="#projects">projects</a>
+       <a href="#pricing">pricing</a>
+       <a href="#contact">contact</a>
+       <a href="Blog.html">blogs</a>
+    </nav>
+ 
+    <div class="icons">
+       <div id="menu-btn" class="fas fa-bars"></div>
+       <div id="info-btn" class="fas fa-info-circle"></div>
+    </div>
+
+ </header>
+ 
+ <div class="contact-info">
+ 
+    <div id="close-contact-info" class="fas fa-times"></div>
+ 
+    <div class="info">
+       <i class="fas fa-phone"></i>
+       <h3>phone number</h3>
+       <p>+91 72088 43484</p>
+       <p>+91 72088 43487</p>
+    </div>
+ 
+    <div class="info">
+       <i class="fas fa-envelope"></i>
+       <h3>email address</h3>
+       <p>kkcreateandbiuld@gmail.com</p>
+    </div>
+ 
+    <div class="info">
+       <i class="fas fa-map-marker-alt"></i>
+       <h3>office address</h3>
+       <p>Radha Nilaya, Plot No. 164/2, Bapane Village, Chandrapada Road, Naigaon (E) - 401208, Maharashtra, India.</p>
+    </div>
+ 
+    <div class="share">
+       <a href="#" class="fab fa-facebook-f"></a>
+       <a href="#" class="fab fa-twitter"></a>
+       <a href="#" class="fab fa-instagram"></a>
+       <a href="#" class="fab fa-linkedin"></a>
+    </div>
+ 
+ </div>
+
+ <!-- header section ends -->
+
+<!-- home section starts -->
+  
+<div id="div1">
+    <div class="slideshow-container">
+ 
+       <div class="mySlides fade">
+         <div class="numbertext">1 / 5</div>
+         <img src="picture-from-back-person-stting-wooden-porch-extending-into-high-mountain-cliff_916191-112079.jpg" style="width:100% ">
+         <div class="text">representation purpose only</div>
+       </div>
+       
+       <div class="mySlides fade">
+         <div class="numbertext">2 / 5</div>
+         <img src="building-with-sign-that-says-welcome-park_1064589-239890.jpg" style="width:100%">
+         <div class="text">representation purpose only</div>
+       </div>
+       
+       <div class="mySlides fade">
+         <div class="numbertext">3 / 5</div>
+         <img src="living-room-with-couch-coffee-table-window_1086760-58695.jpg" style="width:100%">
+         <div class="text">representation purpose only</div>
+       </div>
+ 
+       <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="indoor-design-luxury-resort.jpg" style="width:100%">
+          <div class="text">representation purpose only</div>
+       </div>
+       
+       <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="size-dimensions-kitchen-apartment-ai-generated-illustration_866663-50526.jpg" style="width:100%">
+          <div class="text">representation purpose only</div>
+       </div>
+ 
+       <a class="prev" onclick="plusSlides(-1)">❮</a>
+       <a class="next" onclick="plusSlides(1)">❯</a>
+       
+       </div>
+       <br>
+       
+       <div style="text-align:center">
+         <span class="dot"></span> 
+         <span class="dot" onclick="currentSlide(2)"></span> 
+         <span class="dot" onclick="currentSlide(3)"></span>
+         <span class="dot" onclick="currentSlide(4)"></span>
+         <span class="dot" onclick="currentSlide(5)"></span> 
+       </div>
+       
+ </div>
+ 
+ <p class="statement">"Embrace the Beauty of Nature<br> from Your Own Balcony"<p>
+    <p class="lines">"खरीदें फ्लैट, जहाँ पहाड़ों की सुंदरता<br> हो आपके साथ।“</p>
+    <hr class="h1">
+    <h2>KK Create and Build</h2>
+    <p class="sentence">Welcome to<br>Radha Nilaya Complex <br> 10+ Acres<br>20+ Amenities</p>
+    <p class="sent">Spacious 1,2 BHK Homes </p>
+ <hr class="h2">
+ <hr>
+  <!-- home section ends -->
+ 
+  <!-- amenities section starts  -->
+   <h1 class="heading">Amenities</h1>
+  <section class="slider_container">
+    <section class="slider">
+      <div class="slide one">
+        <img src="ecofriendly-apartment-buildings-with-large-solar-panels-roofs-surrounded-by-bright-autumn-trees_177786-11431.jpg" alt="" />
+        <span class="caption"> SOLAR POWER </span>
+      </div>
+      <div class="slide two">
+        <img src="young-woman-practicing-yoga.jpg" alt="" />
+        <span class="caption"> MEDITATION AREA </span>
+      </div>
+      <div class="slide three">
+        <img src="exercise-machines-gym-without-people.jpg" alt="" />
+        <span class="caption"> OUTDOOR GYM </span>
+      </div>
+      <div class="slide four">
+        <img src="young-woman-jogging-park-embracing-healthy-lifestyle_606187-3896.jpg" alt="" />
+        <span class="caption"> JOGGING TRACK </span>
+      </div>
+      <div class="slide four">
+        <img src="portrait-male-security-guard-with-uniform.jpg" alt="" />
+        <span class="caption"> CCTV SURVILIANCE </span>
+      </div>
+    </section>
+  </section>
+  
+  <!-- amenities section ends-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+ 
+ <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+ 
+ 
+ <script src="script.js"></script>
+</body>
+</html>
